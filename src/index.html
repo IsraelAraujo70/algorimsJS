@@ -7,7 +7,37 @@
     <link rel="stylesheet" href="./styles/main.scss">
 </head>
 <body>
-
+    <div class="container">
+        <h1 class="container__title">
+            Testando Algorítimos em JavaScript
+        </h1>
+        <div class="seletores">
+            <div class="seletores__base">
+                <button onclick="clickBase()">
+                    <span class="text">Inserir Base</span>
+                </button>
+            </div>
+            <div class="seletores__title2">
+                <h2>Selecione o Algorítimo</h2>
+            </div>
+            <div class="seletores__itens">
+                <button onclick="clickBubble()">
+                <span class="text">Bubble Sort</span>
+                </button>
+                <button onclick="clickSelection()">
+                    <span class="text">Selection Sort</span>
+                </button>
+                <button onclick="clickInsertion()">
+                    <span class="text">Insertion Sort</span>
+                </button>
+            </div>
+        </div>
+        <div class="resultadoa">
+            <div class="resultado" id="res">
+                <h3>Resultado</h3>
+            </div>
+        </div>
+    </div>
     <script src="./scripts/main.js"></script>
 </body>
 </html>
