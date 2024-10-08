@@ -32,7 +32,8 @@ body{
         }
         &__base{
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             margin-bottom: 2em;
         }
         &__title2{

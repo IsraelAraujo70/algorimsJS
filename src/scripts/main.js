@@ -3,22 +3,27 @@ const res = document.querySelector('div#res');
 const resa = document.querySelector('div.resultadoa');
 
 function aparecer(){
-    resa.classList.toggle('aparece');
+    if (!resa.classList.contains('aparece')){
+        resa.classList.add('aparece')
+    }
 }
 
 function askTerms() {
     base.length = parseInt(prompt("Digite quantos termos deseja adicionar: "));
 
     for (let i = 0; i < base.length; i++) {
-        base[i] = prompt("Digite o termo que você quer adicionar na base:");
-
-        let resposta = prompt(`Deseja parar? Você digitou ${i + 1} termos até agora. Digite 's' para parar:`);
-        if (resposta === 's') {
+        base[i] = prompt("Digite o número que você quer adicionar na base (Digite 'p' para parar):")
+        if (base[i] === 'p'){
             base.length = i + 1;
             break;
         }
+        else{
+            Number(base[i])
+        }
     }
     return base;
+    const domBase = document.querySelector('div#domBase')
+    domBase.innerHTML += `<p>A base adicionada ao sistema foi: ${base}</p>`
 }
 
 function bubbleSort(base) {
